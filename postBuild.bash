@@ -38,11 +38,7 @@ fi
 EOM
 
 # drfloob: debugging
-sudo dpkg -l | grep systemd
-sudo -E apt-get -y install systemd
-sudo systemctl status docker
-sudo systemctl start docker
-sudo systemctl cat docker
+sudo service start docker
 
 # Grant user sudo access
 echo "workbench ALL=(ALL) NOPASSWD:ALL" | \
