@@ -37,6 +37,10 @@ if ! groups workbench | grep docker > /dev/null; then
 fi
 EOM
 
+sudo systemctl status docker
+sudo systemctl start docker
+sudo systemctl cat docker
+
 # Grant user sudo access
 echo "workbench ALL=(ALL) NOPASSWD:ALL" | \
     sudo tee /etc/sudoers.d/00-workbench > /dev/null
