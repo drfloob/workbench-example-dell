@@ -31,7 +31,7 @@ sudo -E apt-get install git-lfs
 
 cat <<EOM | sudo tee /etc/profile.d/docker-in-docker.sh > /dev/null
 if ! groups workbench | grep docker > /dev/null; then
-    docker_gid=\$(stat -c %g /var/run/docker.sock)
+    docker_gid=1001
     sudo groupadd -g \$docker_gid docker
     sudo usermod -aG docker workbench
 fi
