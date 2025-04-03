@@ -37,6 +37,9 @@ if ! groups workbench | grep docker > /dev/null; then
 fi
 EOM
 
+# drfloob: debugging
+sudo dpkg -l | grep systemd
+sudo -E apt-get -y install systemd
 sudo systemctl status docker
 sudo systemctl start docker
 sudo systemctl cat docker
