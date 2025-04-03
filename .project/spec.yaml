@@ -1,7 +1,7 @@
 specVersion: v2
 specMinorVersion: 2
 meta:
-  name: hybrid-rag
+  name: hybrid-rag-updated
   image: project-hybrid-rag
   description: A project to chat with your own data locally, in the cloud, or using
     a microservice
